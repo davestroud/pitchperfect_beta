@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var recordingInProgress: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,10 +23,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func recordAudio(sender: UIButton) {
-        // TODO: Show text "recording in process"
+        recordingInProgress.hidden = false
         // TODO: Record the users voice
         print ("recordAudio")
     }
 
+    @IBAction func stopButton(sender: UIButton) {
+        
+    }
 }
 
